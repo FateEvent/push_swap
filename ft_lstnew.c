@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 15:16:43 by faventur          #+#    #+#             */
-/*   Updated: 2022/03/25 11:41:16 by faventur         ###   ########.fr       */
+/*   Updated: 2022/03/25 13:39:47 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,14 @@
 
 #include "struct.h"
 
-t_list	*ft_lstnew(void *content)
+t_stack	*ft_lstnew(void *content)
 {
-	t_list	*list;
+	t_stack	*stack;
 
-	list = malloc(sizeof(*list));
-	if (list == NULL)
+	stack = malloc(sizeof(*stack));
+	if (stack == NULL)
 		return (NULL);
-	list->content = content;
-	list->next = NULL;
-	return (list);
+	stack->content = content;
+	stack->next = NULL;
+	return (stack);
 }
