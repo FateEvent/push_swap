@@ -6,25 +6,25 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/28 10:05:18 by faventur          #+#    #+#             */
-/*   Updated: 2022/03/25 11:56:12 by faventur         ###   ########.fr       */
+/*   Updated: 2022/03/25 13:09:22 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** The ft_stackiter() function iterates in the list passed as a parameter
+** The ft_stackiter() function iterates in the stack passed as a parameter
 ** and applies the f function to the content of every element.
 */
 
 #include "struct.h"
 
-void	ft_stackiter(t_list *lst, void (*f)(int))
+void	ft_stackiter(t_stack *stack, void (*f)(int))
 {
-	if (!lst || !f)
+	if (!stack || !f)
 		return ;
-	while (lst != NULL)
+	while (stack != NULL)
 	{
-		f(lst->content);
-		lst = lst->next;
+		f(stack->content);
+		stack = stack->next;
 	}
 }
 

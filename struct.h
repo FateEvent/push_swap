@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   struct.h                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/03/25 13:10:47 by faventur          #+#    #+#             */
+/*   Updated: 2022/03/25 13:37:32 by faventur         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef STRUCT_H
 # define STRUCT_H
 
@@ -12,16 +24,14 @@ typedef struct s_stack
 }					t_stack;
 
 void	ft_stackpush(t_stack **stack, int n);
+int		ft_stacksize(t_stack *stack);
+void	ft_stackdelone(t_stack *stack, void (*del)(void *));
 
 t_list	*ft_lstnew(void *content);
 
-int		ft_lstsize(t_list *lst);
 void	ft_stackiter(t_list *lst, void (*f)(int));
 
-void	ft_lstdelone(t_list *lst, void (*del)(void *));
 void	ft_lstclear(t_list **lst, void (*del)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
-
-t_list	*ft_lstlast(t_list *lst);
 
 #endif
