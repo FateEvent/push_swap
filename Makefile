@@ -10,21 +10,29 @@ RM =	rm -f
 
 NAME = push_swap
 
-NONE='\033[0m'
-PINK='\033[1;35m'
-RED = '\033[1;31m'
-YELLOW = '\033[1;33m'
-GREEN='\033[32m'
-GRAY='\033[2;37m'
-CURSIVE='\033[3m'
+NONE = \033[0m
+HIRED = \033[91m
+HIGREEN = \033[92m
+HIYELLOW = \033[93m
+HIBLUE = \033[94m
+HIMAGENTA = \033[95m
+HICYAN = \033[96m
+HIWHITE = \033[97m
+RED	 = \033[31m
+GREEN =	\033[32m
+YELLOW = \033[33m
+PINK = \033[35m
+GRAY = \033[37m
+CURSIVE = \033[3m
 
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	@$(MAKE) -C ./libft
+	@$(MAKE) -sC ./libft
 	@mv ./libft/libft.a .
 	@gcc $(FLAGS) $(OBJS) $(LINKS) libft.a -o $(NAME)
-	@echo '\033[1;35mMission accomplished!';
+	@echo "$(CURSIVE)$(HIGREEN)Parce qu'ouvrir une fenêtre,$(NONE)"
+	@echo "$(CURSIVE)$(PINK)c'est surfait.$(NONE)"
 	@rm $(OBJS)
 
 $(OBJS): $(SRCS)
