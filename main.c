@@ -4,6 +4,7 @@
 
 int main()
 {
+	/*
 	ft_printf("%d\n", 8);
 	ft_putnbr_base(8, "01");
 	ft_putchar('\n');
@@ -82,6 +83,12 @@ int main()
 	ft_putchar('\n');
 	ft_putnbr_base(12 & 23, "01");
 	ft_printf("\n%d\n", 12 & 23);
+	*/
+	char	x = 127;
+	x += 1;
+	ft_printf("%d\n", x);
+	int	y = 15;
+	ft_printf("%d\n", ~(y & 80000000) | (x & 0x7FFFFFFF));
 }
 
 /**

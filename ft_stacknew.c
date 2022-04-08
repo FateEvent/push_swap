@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_stacknew.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 15:16:43 by faventur          #+#    #+#             */
-/*   Updated: 2022/03/25 13:39:47 by faventur         ###   ########.fr       */
+/*   Updated: 2022/04/08 14:05:07 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** The ft_lstnew() function allocates (with malloc(3)) and returns a
+** The ft_stacknew() function allocates (with malloc(3)) and returns a
 ** new "fresh" element. The "content" member variable is initialised to
 ** the value of the "content" parameter. The "next" variable is
 ** set to NULL.
 */
 
-#include "struct.h"
+#include "stacks.h"
 
-t_stack	*ft_lstnew(void *content)
+t_stack	*ft_stacknew(void *content)
 {
 	t_stack	*stack;
 

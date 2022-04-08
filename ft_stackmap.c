@@ -1,45 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstmap.c                                        :+:      :+:    :+:   */
+/*   ft_stackmap.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/28 10:44:34 by faventur          #+#    #+#             */
-/*   Updated: 2022/03/25 11:41:19 by faventur         ###   ########.fr       */
+/*   Updated: 2022/04/08 14:13:02 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** The ft_lstmap() function iterates in the list passed as a parameter
+** The ft_stackmap() function iterates in the stack passed as a parameter
 ** and applies the f function to the content of every element of the
-** list. It creates a new list resulting from the successive
+** stack. It creates a new stack resulting from the successive
 ** applications of f. The del function is present in order to destroy
 ** an element if necessary.
 */
 
-#include "struct.h"
+#include "stacks.h"
 
-t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
+t_stack	*ft_stackmap(t_stack *stack, void *(*f)(void *), void (*del)(void *))
 {
-	t_list	*new_lst;
-	t_list	*temp;
+	t_stack	*new_stack;
+	t_stack	*temp;
 
-	new_lst = NULL;
+	new_stack = NULL;
 	temp = NULL;
-	if (!lst || !f || !del)
+	if (!stack || !f || !del)
 		return (NULL);
-	while (lst)
+	while (stack)
 	{
-		temp = ft_lstnew(f(lst->content));
+		temp = ft_stacknew(f(stack->content));
 		if (temp == NULL)
 		{
-			ft_lstclear(&temp, del);
+			ft_stackclear(&temp, del);
 			break ;
 		}
-		ft_lstadd_back(&new_lst, temp);
-		lst = lst->next;
+		ft_stackadd_back(&new_stack, temp);
+		stack = stack->next;
 	}
-	ft_lstclear(&lst, del);
-	return (new_lst);
+	ft_stackclear(&stack, del);
+	return (new_stack);
 }
