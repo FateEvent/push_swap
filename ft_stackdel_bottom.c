@@ -1,32 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_stacklast.c                                     :+:      :+:    :+:   */
+/*   ft_stackdel_bottom.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/21 16:52:37 by faventur          #+#    #+#             */
-/*   Updated: 2022/04/08 23:33:52 by faventur         ###   ########.fr       */
+/*   Created: 2022/02/21 15:06:32 by faventur          #+#    #+#             */
+/*   Updated: 2022/04/09 00:11:41 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** The ft_stacklast() function returns the last element of the stack passed
-** as a parameter.
+** The ft_stackdel_bottom() function frees the memory of the element at the
+** bottom of the stack passed as a parameter with free(3).
 */
 
 #include "stacks.h"
 
-t_stack	*ft_stacklast(t_stack *stack)
+void	ft_stackdel_bottom(t_stack **stack, void (*del)(int))
 {
-	t_stack	*current;
-
 	if (stack)
 	{
-		current = stack;
-		while (current->next != NULL)
-			current = current->next;
-		return (current);
+		if (*stack)
+		{
+			del((*stack)->content);
+			del((*stack)->index);
+			free(stack);
+			ft_printf("del_b: %d\n", (*stack)->content);
+		}
 	}
-	return (NULL);
 }
