@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 18:15:08 by faventur          #+#    #+#             */
-/*   Updated: 2022/04/08 21:46:37 by faventur         ###   ########.fr       */
+/*   Updated: 2022/04/08 22:43:25 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,6 @@ void	ft_stack_init(int argc, char *argv[], t_stack **stack)
 {
 	char	**arg_arr;
 	int		i;
-	int		size;
 
 	i = 0;
 	if (argc == 2)

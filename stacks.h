@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/25 13:10:47 by faventur          #+#    #+#             */
-/*   Updated: 2022/04/08 21:58:27 by faventur         ###   ########.fr       */
+/*   Updated: 2022/04/08 23:05:12 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,15 +24,16 @@ typedef struct s_stack
 }					t_stack;
 
 t_stack	*ft_stacknew(int content);
-t_stack	*ft_stackmap(t_stack *stack, void *(*f)(void *), void (*del)(void *));
 t_stack	*ft_stacklast(t_stack *stack);
 void	ft_stackpush(t_stack **stack, int n);
 void	ft_stackadd_top(t_stack **stack, t_stack *new);
 void	ft_stackadd_bottom(t_stack **stack, t_stack *new);
-void	ft_stackiter(t_stack *stack, void (*f)(int));
+void	ft_stackdel_top(t_stack **stack);
 void	ft_stackdelone(t_stack *stack);
 void	ft_stackclear(t_stack **stack);
 int		ft_stacksize(t_stack *stack);
+void	ft_stackiter(t_stack *stack, void (*f)(int));
+void	ft_stackdisplay(t_stack *stack);
 
 void	ft_stack_init(int argc, char *argv[], t_stack **stack);
 int		ft_check_args(int argc, char *argv[]);

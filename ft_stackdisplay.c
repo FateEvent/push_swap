@@ -1,25 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_stackdelone.c                                   :+:      :+:    :+:   */
+/*   ft_stackdisplay.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/21 15:06:32 by faventur          #+#    #+#             */
-/*   Updated: 2022/04/08 22:40:59 by faventur         ###   ########.fr       */
+/*   Created: 2022/04/08 22:50:05 by faventur          #+#    #+#             */
+/*   Updated: 2022/04/08 23:04:57 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** The ft_stackdelone() function frees the memory of the element passed
-** as a parameter with free(3).
+** The ft_stackdisplay() function shows the content of every element of the
+** stack passed as a parameter.
 */
 
 #include "stacks.h"
 
-void	ft_stackdelone(t_stack *stack)
+static void	ft_putnbr_endl(int n)
 {
-	if (!stack)
-		return ;
-	free(stack);
+	ft_putnbr(n);
+	ft_putchar('\n');
+}
+
+void	ft_stackdisplay(t_stack *stack)
+{
+	ft_stackiter(stack, ft_putnbr_endl);
 }

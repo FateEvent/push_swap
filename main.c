@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 14:16:16 by faventur          #+#    #+#             */
-/*   Updated: 2022/04/08 21:40:59 by faventur         ###   ########.fr       */
+/*   Updated: 2022/04/08 23:16:18 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,21 @@ int	main(int argc, char *argv[])
 	t_stack	**stack_a;
 	t_stack	**stack_b;
 	int		size;
+	int	size2;
 
-	ft_check_args(argc, argv);
+//	ft_check_args(argc, argv);		// pas encore vérifié
 	stack_a = (t_stack **)malloc(sizeof(stack_a));
 	stack_b = (t_stack **)malloc(sizeof(stack_b));
 	*stack_a = NULL;
 	*stack_b = NULL;
 	ft_stack_init(argc, argv, stack_a);
 	size = ft_stacksize(*stack_a);
+	ft_printf("%d\n", size);
+	ft_stackdelone(*stack_a);
+	size2 = ft_stacksize(*stack_a);
+	ft_printf("%d\n", size2);
+	ft_stackdisplay(*stack_a);
+	ft_stackdisplay(*stack_b);
 }
 
 /**
