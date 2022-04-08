@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 14:16:16 by faventur          #+#    #+#             */
-/*   Updated: 2022/04/09 00:13:25 by faventur         ###   ########.fr       */
+/*   Updated: 2022/04/09 00:20:43 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,8 @@ int	main(int argc, char *argv[])
 	size = ft_stacksize(*stack_a);
 	ft_printf("%d\n", size);
 //	ft_stackdel_bottom(stack_a, nbr_deletion);		// efface pas
-	ft_stackdel_top(stack_a);		// efface pas
-	ft_stackdelone(*stack_a, nbr_deletion);
+	ft_stackdel_top(stack_a, nbr_deletion);		// efface pas
+	ft_stackdelone(*stack_a, nbr_deletion);		// efface pas
 	size2 = ft_stacksize(*stack_a);
 	ft_printf("%d\n", size2);
 	ft_stackdisplay(*stack_a);
