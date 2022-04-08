@@ -1,94 +1,29 @@
-#include "libft/includes/libft.h"
-#include "libft/includes/ft_printf.h"
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/04/08 14:16:16 by faventur          #+#    #+#             */
+/*   Updated: 2022/04/08 18:20:41 by faventur         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int main()
+#include "stacks.h"
+
+int	main(int argc, char *argv[])
 {
-	/*
-	ft_printf("%d\n", 8);
-	ft_putnbr_base(8, "01");
-	ft_putchar('\n');
-	ft_putnbr_base(8 >> 1, "01");
-	ft_printf("\n%d\n", 8 >> 1);
+	t_stack	**stack_a;
+	t_stack	**stack_b;
 
-	ft_printf("%d\n", 5);
-	ft_putnbr_base(5, "01");
-	ft_putchar('\n');
-	ft_putnbr_base(5 >> 2, "01");
-	ft_printf("\n%d\n", 5 >> 2);
-
-	ft_printf("%d\n", 36);
-	ft_putnbr_base(36, "01");
-	ft_putchar('\n');
-	ft_putnbr_base(36 >> 2, "01");
-	ft_printf("\n%d\n", 36 >> 2);
-
-	ft_printf("%d\n", 2);
-	ft_putnbr_base(2, "01");
-	ft_putchar('\n');
-	ft_putnbr_base(2 >> 4, "01");
-	ft_printf("\n%d\n", 2 >> 4);
-
-	ft_printf("%d\n", 87);
-	ft_putnbr_base(87, "01");
-	ft_putchar('\n');
-	ft_putnbr_base(87 >> 3, "01");
-	ft_printf("\n%d\n", 87 >> 3);
-
-	ft_printf("%d, %d\n", 5, 6);
-	ft_putnbr_base(5, "01");
-	ft_putchar('\n');
-	ft_putnbr_base(6, "01");
-	ft_putchar('\n');
-	ft_putnbr_base(5&6, "01");
-	ft_printf("\n%d\n", 5&6);
-
-	ft_printf("%d, %d\n", 5, 6);
-	ft_putnbr_base(5, "01");
-	ft_putchar('\n');
-	ft_putnbr_base(6, "01");
-	ft_putchar('\n');
-	ft_putnbr_base(5 & 6, "01");
-	ft_putchar('\n');
-	ft_printf("%d\n", 5 & 6);
-
-	ft_printf("%d, %d\n", 2, 5);
-	ft_putnbr_base(2, "01");
-	ft_putchar('\n');
-	ft_putnbr_base(5, "01");
-	ft_putchar('\n');
-	ft_putnbr_base(2 & 5, "01");
-	ft_printf("\n%d\n", 2 & 5);
-
-	ft_printf("%d, %d\n", 15, 9);
-	ft_putnbr_base(15, "01");
-	ft_putchar('\n');
-	ft_putnbr_base(9, "01");
-	ft_putchar('\n');
-	ft_putnbr_base(15 & 9, "01");
-	ft_printf("\n%d\n", 15 & 9);
-
-	ft_printf("%d, %d\n", 5, 10);
-	ft_putnbr_base(5, "01");
-	ft_putchar('\n');
-	ft_putnbr_base(10, "01");
-	ft_putchar('\n');
-	ft_putnbr_base(5 & 10, "01");
-	ft_printf("\n%d\n", 5 & 10);
-
-	ft_printf("%d, %d\n", 12, 23);
-	ft_putnbr_base(12, "01");
-	ft_putchar('\n');
-	ft_putnbr_base(23, "01");
-	ft_putchar('\n');
-	ft_putnbr_base(12 & 23, "01");
-	ft_printf("\n%d\n", 12 & 23);
-	*/
-	char	x = 127;
-	x += 1;
-	ft_printf("%d\n", x);
-	int	y = 15;
-	ft_printf("%d\n", ~(y & 80000000) | (x & 0x7FFFFFFF));
+	ft_check_args(argc, argv);
+	stack_a = (t_stack **)malloc(sizeof(stack_a));
+	stack_b = (t_stack **)malloc(sizeof(stack_b));
+	*stack_a = NULL;
+	*stack_b = NULL;
+	ft_stack_init(argc, argv, stack_a);
+	/* ft_stacksize(*stack); */
 }
 
 /**
@@ -100,6 +35,8 @@ int main()
  * and then for the the bit on the right of it
  * until there are no bits left
  * 
+ * Je cree mes deux listes de la meme taille (en me basant sur le nombre d'elements que je recois, que je compte)
+ * Je 
  * 
  * 
 */

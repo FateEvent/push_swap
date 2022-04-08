@@ -1,32 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_stacknew.c                                      :+:      :+:    :+:   */
+/*   ft_stacklast.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/21 15:16:43 by faventur          #+#    #+#             */
-/*   Updated: 2022/04/08 18:06:43 by faventur         ###   ########.fr       */
+/*   Created: 2022/02/21 16:52:37 by faventur          #+#    #+#             */
+/*   Updated: 2022/04/08 16:32:18 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** The ft_stacknew() function allocates (with malloc(3)) and returns a
-** new "fresh" element. The "content" member variable is initialised to
-** the value of the "content" parameter. The "next" variable is
-** set to NULL.
+** The ft_stacklast() function returns the last element of the stack passed
+** as a parameter.
 */
-
 #include "stacks.h"
 
-t_stack	*ft_stacknew(int content)
+t_stack	*ft_lstlast(t_stack *stack)
 {
-	t_stack	*stack;
+	t_stack	*current;
 
-	stack = malloc(sizeof(*stack));
-	if (stack == NULL)
-		return (NULL);
-	stack->content = content;
-	stack->next = NULL;
-	return (stack);
+	if (stack)
+	{
+		current = stack;
+		while (current->next != NULL)
+			current = current->next;
+		return (current);
+	}
+	return (NULL);
 }
