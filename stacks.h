@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/25 13:10:47 by faventur          #+#    #+#             */
-/*   Updated: 2022/04/09 18:17:59 by faventur         ###   ########.fr       */
+/*   Updated: 2022/04/09 18:31:26 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,9 @@ typedef struct s_node
 
 typedef struct s_stack
 {
-	struct s_node	*first;
-	struct s_node	*last;
+	size_t			length;
+	struct s_node	*top;
+	struct s_node	*bottom;
 }					t_stack;
 
 t_node	*ft_stacknew(int content);
