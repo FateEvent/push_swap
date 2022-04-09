@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/25 13:10:47 by faventur          #+#    #+#             */
-/*   Updated: 2022/04/09 15:56:33 by faventur         ###   ########.fr       */
+/*   Updated: 2022/04/09 18:17:59 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,33 +16,37 @@
 # include "libft/includes/libft.h"
 # include "libft/includes/ft_printf.h"
 
-typedef struct s_stack
+typedef struct s_node
 {
 	int				content;
 	int				index;
-	struct s_stack	*prev;
-	struct s_stack	*next;
+	struct s_node	*prev;
+	struct s_node	*next;
+}					t_node;
+
+typedef struct s_stack
+{
+	struct s_node	*first;
+	struct s_node	*last;
 }					t_stack;
 
-t_stack	*ft_stacknew(int content);
-t_stack	*ft_stacklast(t_stack *stack);
-void	ft_stackpush(t_stack **stack, int n);
-void	ft_stackadd_top(t_stack **stack, t_stack *new);
-void	ft_stackadd_bottom(t_stack **stack, t_stack *new);
+t_node	*ft_stacknew(int content);
+t_node	*ft_stacklast(t_node *stack);
+void	ft_stackpush(t_node **stack, int n);
+void	ft_stackadd_top(t_node **stack, t_node *new);
+void	ft_stackadd_bottom(t_node **stack, t_node *new);
 
-void	ft_stackdel_top(t_stack **stack);
-void	ft_stackdel_bottom(t_stack **stack);
-void	ft_stackdelone(t_stack *stack);
-void	ft_stackclear(t_stack **stack);
-void	ft_stackiter(t_stack *stack, void (*f)(int));
-void	ft_stackdisplay(t_stack *stack);
-int		ft_stacksize(t_stack *stack);
+void	ft_stackdelone(t_node *stack);
+void	ft_stackclear(t_node **stack);
+void	ft_stackiter(t_node *stack, void (*f)(int));
+void	ft_stackdisplay(t_node *stack);
+int		ft_stacksize(t_node *stack);
 
-void	ft_stack_init(int argc, char *argv[], t_stack **stack);
+void	ft_stack_init(int argc, char *argv[], t_node *stack);
 int		ft_check_args(int argc, char *argv[]);
 void	ft_puterror(const char *str);
 
-void	ft_assign_index(t_stack **stack);
+void	ft_assign_index(t_node **stack);
 void	ft_sort_int_tab(int	*tab, int size);
 
 #endif

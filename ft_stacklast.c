@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 16:52:37 by faventur          #+#    #+#             */
-/*   Updated: 2022/04/08 23:33:52 by faventur         ###   ########.fr       */
+/*   Updated: 2022/04/09 18:22:00 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@
 
 #include "stacks.h"
 
-t_stack	*ft_stacklast(t_stack *stack)
+t_node	*ft_stacklast(t_node *stack)
 {
-	t_stack	*current;
+	t_node	*current;
 
 	if (stack)
 	{

@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/09 00:01:03 by faventur          #+#    #+#             */
-/*   Updated: 2022/04/09 13:58:19 by faventur         ###   ########.fr       */
+/*   Updated: 2022/04/09 18:22:50 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 #include "stacks.h"
 
-void	ft_stackdelone(t_stack *stack)
+void	ft_stackdelone(t_node *stack)
 {
 	if (!stack)
 		return ;

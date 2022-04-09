@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 16:52:37 by faventur          #+#    #+#             */
-/*   Updated: 2022/04/09 16:14:12 by faventur         ###   ########.fr       */
+/*   Updated: 2022/04/09 18:22:41 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,21 @@
 
 #include "stacks.h"
 
-void	ft_stackadd_top(t_stack **stack, t_stack *new)
+void	ft_stackadd_top(t_node **stack, t_node *new)
 {
+	ft_printf("add what\n");
 	if (new == NULL)
 		return ;
-	new->prev = *stack;
-	new->next = (*stack)->next;
+	new->prev = NULL;
+	if (stack != NULL)
+	{
+		new->next = stack[0]->next;
+		write(1, "boucle\n", 7);
+		new->next->prev = new;
+	}
+	else
+		new->next = NULL;
+	write(1, "outboucle\n", 10);
 	*stack = new;
+	ft_printf("add %d\n", (*stack)->content);
 }

@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 18:15:08 by faventur          #+#    #+#             */
-/*   Updated: 2022/04/09 12:14:07 by faventur         ###   ########.fr       */
+/*   Updated: 2022/04/09 18:18:04 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ void	ft_sort_int_tab(int	*tab, int size)
 	}
 }
 
-static int	*ft_create_arr(t_stack *stack, int size)
+static int	*ft_create_arr(t_node *stack, int size)
 {
 	int	*arr;
 	int	i;
@@ -50,7 +50,7 @@ static int	*ft_create_arr(t_stack *stack, int size)
 	return (arr);
 }
 
-void	ft_assign_index(t_stack **stack)
+void	ft_assign_index(t_node **stack)
 {
 	int	*arr;
 	int	size;
@@ -77,7 +77,7 @@ void	ft_puterror(const char *str)
 	exit(EXIT_FAILURE);
 }
 
-void	ft_stack_init(int argc, char *argv[], t_stack **stack)
+void	ft_stack_init(int argc, char *argv[], t_node *stack)
 {
 	char	**arg_arr;
 	int		i;

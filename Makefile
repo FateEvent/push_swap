@@ -1,4 +1,4 @@
-SRCS = main.c check_ft.c utils.c actions.c ft_stacknew.c ft_stacklast.c ft_stackpush.c ft_stackadd_top.c ft_stackadd_bottom.c ft_stackdel_top.c ft_stackdel_bottom.c ft_stackdelone.c ft_stackclear.c ft_stacksize.c ft_stackiter.c ft_stackdisplay.c
+SRCS = main.c check_ft.c utils.c actions.c ft_stacknew.c ft_stacklast.c ft_stackpush.c ft_stackadd_top.c ft_stackadd_bottom.c ft_stackdelone.c ft_stackclear.c ft_stacksize.c ft_stackiter.c ft_stackdisplay.c
 
 OBJS = $(SRCS:.c=.o)
 
@@ -31,8 +31,8 @@ $(NAME): $(OBJS)
 	@$(MAKE) -sC ./libft
 	@mv ./libft/libft.a .
 	@gcc $(FLAGS) $(OBJS) $(LINKS) libft.a -o $(NAME)
-	@echo "$(CURSIVE)$(HIGREEN)Parce qu'ouvrir une fenêtre,$(NONE)"
-	@echo "$(CURSIVE)$(PINK)c'est surfait.$(NONE)"
+#	@echo "$(CURSIVE)$(HIMAGENTA)Me? I would just like to be a memory$(NONE)"
+#	@echo "$(CURSIVE)$(HIYELLOW)in the mind of people. That's all.$(NONE)"
 	@rm $(OBJS)
 
 $(OBJS): $(SRCS)

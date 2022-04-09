@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 15:16:43 by faventur          #+#    #+#             */
-/*   Updated: 2022/04/09 14:24:48 by faventur         ###   ########.fr       */
+/*   Updated: 2022/04/09 18:18:23 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@
 
 #include "stacks.h"
 
-t_stack	*ft_stacknew(int content)
+t_node	*ft_stacknew(int content)
 {
-	t_stack	*stack;
+	t_node	*stack;
 
 	stack = malloc(sizeof(*stack));
 	if (stack == NULL)
@@ -29,5 +29,6 @@ t_stack	*ft_stacknew(int content)
 	stack->content = content;
 	stack->prev = NULL;
 	stack->next = NULL;
+	ft_printf("new %d\n", stack->content);
 	return (stack);
 }
