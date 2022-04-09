@@ -6,16 +6,11 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 14:16:16 by faventur          #+#    #+#             */
-/*   Updated: 2022/04/09 00:20:43 by faventur         ###   ########.fr       */
+/*   Updated: 2022/04/09 12:19:29 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "stacks.h"
-
-void	nbr_deletion(int n)
-{
-	n = 0;
-}
 
 int	main(int argc, char *argv[])
 {
@@ -32,9 +27,9 @@ int	main(int argc, char *argv[])
 	ft_stack_init(argc, argv, stack_a);
 	size = ft_stacksize(*stack_a);
 	ft_printf("%d\n", size);
-//	ft_stackdel_bottom(stack_a, nbr_deletion);		// efface pas
-	ft_stackdel_top(stack_a, nbr_deletion);		// efface pas
-	ft_stackdelone(*stack_a, nbr_deletion);		// efface pas
+//	ft_stackdel_bottom(stack_a);		// efface pas
+//	ft_stackdel_top(stack_a);		// efface pas
+	ft_stackdelone(*stack_a);		// efface pas
 	size2 = ft_stacksize(*stack_a);
 	ft_printf("%d\n", size2);
 	ft_stackdisplay(*stack_a);

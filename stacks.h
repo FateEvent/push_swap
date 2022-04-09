@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/25 13:10:47 by faventur          #+#    #+#             */
-/*   Updated: 2022/04/09 00:21:23 by faventur         ###   ########.fr       */
+/*   Updated: 2022/04/09 12:10:55 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,10 @@ void	ft_stackpush(t_stack **stack, int n);
 void	ft_stackadd_top(t_stack **stack, t_stack *new);
 void	ft_stackadd_bottom(t_stack **stack, t_stack *new);
 
-void	ft_stackdel_top(t_stack **stack, void (*del)(int));
-void	ft_stackdel_bottom(t_stack **stack, void (*del)(int));
-void	ft_stackdelone(t_stack *stack, void (*del)(int));
-void	ft_stackclear(t_stack **stack, void (*del)(int));
+void	ft_stackdel_top(t_stack **stack);
+void	ft_stackdel_bottom(t_stack **stack);
+void	ft_stackdelone(t_stack *stack);
+void	ft_stackclear(t_stack **stack);
 void	ft_stackiter(t_stack *stack, void (*f)(int));
 void	ft_stackdisplay(t_stack *stack);
 int		ft_stacksize(t_stack *stack);
@@ -40,6 +40,8 @@ int		ft_stacksize(t_stack *stack);
 void	ft_stack_init(int argc, char *argv[], t_stack **stack);
 int		ft_check_args(int argc, char *argv[]);
 void	ft_puterror(const char *str);
-void	nbr_deletion(int n);
+
+void	ft_assign_index(t_stack **stack);
+void	ft_sort_int_tab(int	*tab, int size);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 22:38:22 by faventur          #+#    #+#             */
-/*   Updated: 2022/04/09 00:20:08 by faventur         ###   ########.fr       */
+/*   Updated: 2022/04/09 12:08:16 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 #include "stacks.h"
 
-void	ft_stackdel_top(t_stack **stack, void (*del)(int))
+void	ft_stackdel_top(t_stack **stack)
 {
 	t_stack	*current;
 
@@ -26,8 +26,6 @@ void	ft_stackdel_top(t_stack **stack, void (*del)(int))
 		if (*stack)
 		{
 			current = ft_stacklast(*stack);
-			del(current->content);
-			del(current->index);
 			free(current);
 			ft_printf("last: %d\n", current->content);
 		}
