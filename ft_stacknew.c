@@ -5,30 +5,29 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/21 15:16:43 by faventur          #+#    #+#             */
-/*   Updated: 2022/04/09 18:18:23 by faventur         ###   ########.fr       */
+/*   Created: 2022/04/09 20:06:06 by faventur          #+#    #+#             */
+/*   Updated: 2022/04/09 20:07:52 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
 ** The ft_stacknew() function allocates (with malloc(3)) and returns a
-** new "fresh" element. The "content" member variable is initialised to
-** the value of the "content" parameter. The "next" variable is
-** set to NULL.
+** new "fresh" stack. The "top" and "bottom" variables are set to
+** NULL.
 */
 
 #include "stacks.h"
 
-t_node	*ft_stacknew(int content)
+t_stack	*ft_stacknew(void)
 {
-	t_node	*stack;
+	t_stack	*new;
 
-	stack = malloc(sizeof(*stack));
-	if (stack == NULL)
-		return (NULL);
-	stack->content = content;
-	stack->prev = NULL;
-	stack->next = NULL;
-	ft_printf("new %d\n", stack->content);
-	return (stack);
+	new = malloc(sizeof(*new));
+	if (new != NULL)
+	{
+		new->length = 0;
+		new->top = NULL;
+		new->bottom = NULL;
+	}
+	return (new);
 }
