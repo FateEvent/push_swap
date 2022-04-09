@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/25 13:10:47 by faventur          #+#    #+#             */
-/*   Updated: 2022/04/09 12:10:55 by faventur         ###   ########.fr       */
+/*   Updated: 2022/04/09 15:46:34 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,16 @@ typedef struct s_stack
 {
 	int				content;
 	int				index;
+	struct s_stack	*prev;
 	struct s_stack	*next;
 }					t_stack;
+
+typedef struct s_master
+{
+	size_t			length;
+	struct s_stack	*tail;
+	struct s_stack	*head;
+}					t_master;
 
 t_stack	*ft_stacknew(int content);
 t_stack	*ft_stacklast(t_stack *stack);

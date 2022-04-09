@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 15:16:43 by faventur          #+#    #+#             */
-/*   Updated: 2022/04/08 18:06:43 by faventur         ###   ########.fr       */
+/*   Updated: 2022/04/09 14:24:48 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ t_stack	*ft_stacknew(int content)
 	if (stack == NULL)
 		return (NULL);
 	stack->content = content;
+	stack->prev = NULL;
 	stack->next = NULL;
 	return (stack);
 }
