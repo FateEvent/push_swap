@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 14:16:16 by faventur          #+#    #+#             */
-/*   Updated: 2022/04/09 18:19:44 by faventur         ###   ########.fr       */
+/*   Updated: 2022/04/10 16:12:25 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,12 @@
 
 int	main(int argc, char *argv[])
 {
-	t_node	*stack_a;
-	t_node	*stack_b;
-	t_stack	master_a;
-	t_stack	master_b;
+	t_stack	*stack_a;
+	t_stack	*stack_b;
 
 //	ft_check_args(argc, argv);		// pas encore vérifié
-	stack_a = (t_node *)malloc(sizeof(stack_a));
-	stack_b = (t_node *)malloc(sizeof(stack_b));
-	stack_a = NULL;
-	stack_b = NULL;
-	master_a.first = stack_a;
+	stack_a = ft_stacknew();
+	stack_b = ft_stacknew();
 	ft_stack_init(argc, argv, stack_a);
 
 	ft_stackdisplay(stack_a);

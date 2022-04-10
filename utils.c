@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 18:15:08 by faventur          #+#    #+#             */
-/*   Updated: 2022/04/09 18:18:04 by faventur         ###   ########.fr       */
+/*   Updated: 2022/04/10 16:20:50 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,7 @@ void	ft_puterror(const char *str)
 	exit(EXIT_FAILURE);
 }
 
-void	ft_stack_init(int argc, char *argv[], t_node *stack)
+void	ft_stack_init(int argc, char *argv[], t_stack *stack)
 {
 	char	**arg_arr;
 	int		i;
@@ -92,7 +92,7 @@ void	ft_stack_init(int argc, char *argv[], t_node *stack)
 	}
 	while (arg_arr[i])
 	{
-		ft_stackadd_top(stack, ft_stacknew(ft_atoi(arg_arr[i])));
+		ft_stackadd_top(stack, ft_newnode(ft_atoi(arg_arr[i])));
 		i++;
 	}
 }
