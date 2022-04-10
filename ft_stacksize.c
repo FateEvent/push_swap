@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 17:13:51 by faventur          #+#    #+#             */
-/*   Updated: 2022/04/09 18:21:34 by faventur         ###   ########.fr       */
+/*   Updated: 2022/04/10 18:46:48 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,17 +17,21 @@
 
 #include "stacks.h"
 
-int	ft_stacksize(t_node *stack)
+int	ft_stacksize(t_stack *stack)
 {
+	t_node	*current;
 	int		counter;
 
-	counter = 0;
-	if (stack == NULL)
-		return (0);
-	while (stack != NULL)
+	if (stack != NULL)
 	{
-		counter++;
-		stack = stack->next;
-	}
-	return (counter);
+		current = stack->top;
+		counter = 0;
+		while (current != NULL)
+		{
+			counter++;
+			current = current->next;
+		}
+		return (counter);
+	}	
+	return (0);
 }

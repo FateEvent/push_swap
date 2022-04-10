@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 15:19:24 by faventur          #+#    #+#             */
-/*   Updated: 2022/04/10 16:20:11 by faventur         ###   ########.fr       */
+/*   Updated: 2022/04/10 18:20:01 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,8 @@
 
 t_stack	*ft_stackadd_bottom(t_stack *stack, t_node *new)
 {
-	t_node	*new;
-
 	if (stack != NULL && new != NULL)
 	{
-		new->next = NULL;
 		if (stack->bottom == NULL)
 		{
 			new->prev = NULL;

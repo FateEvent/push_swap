@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 18:15:08 by faventur          #+#    #+#             */
-/*   Updated: 2022/04/10 16:20:50 by faventur         ###   ########.fr       */
+/*   Updated: 2022/04/10 18:52:43 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,40 +33,44 @@ void	ft_sort_int_tab(int	*tab, int size)
 	}
 }
 
-static int	*ft_create_arr(t_node *stack, int size)
+static int	*ft_create_arr(t_stack *stack, int size)
 {
-	int	*arr;
-	int	i;
+	t_node	*current;
+	int		*arr;
+	int		i;
 
 	if (!stack)
 		return (NULL);
+	current = stack->top;
 	arr = malloc(sizeof(int) * size);
 	i = 0;
-	while (stack != NULL)
+	while (current != NULL)
 	{
-		arr[i] = stack->content;
-		stack = stack->next;
+		arr[i] = current->content;
+		current = current->next;
 	}
 	return (arr);
 }
 
-void	ft_assign_index(t_node **stack)
+void	ft_assign_index(t_stack *stack)
 {
-	int	*arr;
-	int	size;
-	int	i;
-	int	j;
+	t_node	*current;
+	int		*arr;
+	int		size;
+	int		i;
+	int		j;
 
-	size = ft_stacksize(*stack);
 	i = 0;
 	j = 0;
-	arr = ft_create_arr(*stack, size);
+	size = ft_stacksize(stack);
+	arr = ft_create_arr(stack, size);
 	ft_sort_int_tab(arr, size);
-	while (i < size - 1 && stack != NULL)
+	current = stack->top;
+	while (i < size - 1 && current != NULL)
 	{
-		if ((*stack)->content == arr[i])
-			(*stack)->index = i;
-		(*stack) = (*stack)->next;
+		if (current->content == arr[i])
+			current->index = i;
+		current = current->next;
 		i++;
 	}
 }
