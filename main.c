@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 14:16:16 by faventur          #+#    #+#             */
-/*   Updated: 2022/04/10 16:12:25 by faventur         ###   ########.fr       */
+/*   Updated: 2022/04/10 19:38:52 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,11 @@ int	main(int argc, char *argv[])
 	stack_a = ft_stacknew();
 	stack_b = ft_stacknew();
 	ft_stack_init(argc, argv, stack_a);
+	ft_assign_index(stack_a);
 
 	ft_stackdisplay(stack_a);
-	ft_stackdisplay(stack_b);
+	ft_putchar('\n');
+	ft_displayindex(stack_a);
 
 }
 

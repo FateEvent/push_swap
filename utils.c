@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 18:15:08 by faventur          #+#    #+#             */
-/*   Updated: 2022/04/10 18:52:43 by faventur         ###   ########.fr       */
+/*   Updated: 2022/04/10 19:50:19 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,15 +39,17 @@ static int	*ft_create_arr(t_stack *stack, int size)
 	int		*arr;
 	int		i;
 
-	if (!stack)
+	arr = malloc(sizeof(int) * size);
+	if (!stack || !arr)
 		return (NULL);
 	current = stack->top;
-	arr = malloc(sizeof(int) * size);
 	i = 0;
-	while (current != NULL)
+	while (i < size)
 	{
 		arr[i] = current->content;
+		ft_printf("arr[i]: %d\n", arr[i]);
 		current = current->next;
+		i++;
 	}
 	return (arr);
 }
@@ -63,10 +65,12 @@ void	ft_assign_index(t_stack *stack)
 	i = 0;
 	j = 0;
 	size = ft_stacksize(stack);
+	ft_printf("size: %d\n", size);
 	arr = ft_create_arr(stack, size);
+	ft_printf("arr: %d %d %d\n", arr[0], arr[1], arr[2]);
 	ft_sort_int_tab(arr, size);
 	current = stack->top;
-	while (i < size - 1 && current != NULL)
+	while (i < size - 1)
 	{
 		if (current->content == arr[i])
 			current->index = i;

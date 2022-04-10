@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/25 13:10:47 by faventur          #+#    #+#             */
-/*   Updated: 2022/04/10 18:48:15 by faventur         ###   ########.fr       */
+/*   Updated: 2022/04/10 19:36:17 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ t_stack	*ft_stackinsert(t_stack *stack, t_node *node, int position);
 void	ft_stackclear(t_stack **stack);
 int		ft_stacksize(t_stack *stack);
 void	ft_stackdisplay(t_stack *stack);
+void	ft_displayindex(t_stack *stack);
 
 void	ft_stack_init(int argc, char *argv[], t_stack *stack);
 int		ft_check_args(int argc, char *argv[]);
