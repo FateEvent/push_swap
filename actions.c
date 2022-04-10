@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 21:41:32 by faventur          #+#    #+#             */
-/*   Updated: 2022/04/10 23:53:27 by faventur         ###   ########.fr       */
+/*   Updated: 2022/04/11 00:02:46 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,12 +40,19 @@ void	ft_rotate(t_stack *stack)
 		stack->bottom = stack->top;
 		stack->top = stack->top->next;
 		stack->bottom->next = NULL;
+		ft_printf("%d, %d, %d\n", stack->top->content, stack->top->next->content, stack->top->next->next->content);
 	}
 }
-/*
+
 void	ft_rev_rotate(t_stack *stack)
 {
-	if (ft_stacksize(stack) > 1)
-		ft_stackadd_top(stack, stack->bottom);
+	if (stack != NULL && ft_stacksize(stack) > 1)
+	{
+		stack->top->prev = stack->bottom;
+		stack->bottom->next = stack->top;
+		stack->top = stack->bottom;
+		stack->bottom = stack->bottom->prev;
+		stack->bottom->next = NULL;
+		ft_printf("%d, %d, %d\n", stack->top->content, stack->top->next->content, stack->top->next->next->content);
+	}
 }
-*/
