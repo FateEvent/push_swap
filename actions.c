@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 21:41:32 by faventur          #+#    #+#             */
-/*   Updated: 2022/04/11 12:16:14 by faventur         ###   ########.fr       */
+/*   Updated: 2022/04/11 12:16:41 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ void	ft_push(t_stack *stack1, t_stack *stack2)
 			stack2->top->prev = NULL;
 			stack1->top->prev = NULL;
 
-			stack2->top->next = stack2->top->next->next;
+//			stack2->top->next = stack2->top->next->next;
 			ft_printf("a1 %d, a2 %d, b1 %d, b2 %d\n", stack1->top->content, stack1->top->next->content, stack2->top->content, stack2->top->next->content);
 			/*
 			stack1->top->next->next = stack->top->next;
