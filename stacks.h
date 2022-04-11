@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/25 13:10:47 by faventur          #+#    #+#             */
-/*   Updated: 2022/04/10 21:42:33 by faventur         ###   ########.fr       */
+/*   Updated: 2022/04/11 17:07:08 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,5 +51,19 @@ void	ft_swap(t_stack *stack);
 void	ft_push(t_stack *stack1, t_stack *stack2);
 void	ft_rotate(t_stack *stack);
 void	ft_rev_rotate(t_stack *stack);
+
+void	radix_sort(t_stack *stack1, t_stack *stack2, int size);
+
+void	sa(t_stack *stack_a);
+void	sb(t_stack *stack_b);
+void	ss(t_stack *stack_a, t_stack *stack_b);
+void	pa(t_stack *stack_b, t_stack *stack_a);
+void	pb(t_stack *stack_a, t_stack *stack_b);
+void	ra(t_stack *stack_a);
+void	rb(t_stack *stack_b);
+void	rr(t_stack *stack_a, t_stack *stack_b);
+void	rra(t_stack *stack_a);
+void	rrb(t_stack *stack_b);
+void	rrr(t_stack *stack_a, t_stack *stack_b);
 
 #endif

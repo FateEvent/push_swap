@@ -6,12 +6,13 @@
 #    By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/10 17:53:32 by faventur          #+#    #+#              #
-#    Updated: 2022/04/10 19:21:57 by faventur         ###   ########.fr        #
+#    Updated: 2022/04/11 17:10:29 by faventur         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS = 	main.c check_ft.c utils.c actions.c ft_stacknew.c ft_newnode.c \
-	ft_stackadd_top.c ft_stackadd_bottom.c ft_stackinsert.c ft_stackclear.c \
+SRCS = 	main.c check_ft.c utils.c actions.c algorithm.c rules1.c \
+	rules2.c rules3.c ft_stacknew.c ft_newnode.c ft_stackadd_top.c \
+	ft_stackadd_bottom.c ft_stackinsert.c ft_stackclear.c \
 	ft_stacksize.c ft_stackiter.c ft_stackdisplay.c
 
 OBJS = $(SRCS:.c=.o)

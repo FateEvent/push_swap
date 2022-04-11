@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 18:15:08 by faventur          #+#    #+#             */
-/*   Updated: 2022/04/10 21:18:44 by faventur         ###   ########.fr       */
+/*   Updated: 2022/04/11 16:18:01 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,11 +47,9 @@ static int	*ft_create_arr(t_stack *stack, int size)
 	while (i < size)
 	{
 		arr[i] = current->content;
-		ft_printf("arr[i]: %d\n", arr[i]);
 		current = current->next;
 		i++;
 	}
-	ft_printf("arr: %d %d %d\n", arr[0], arr[1], arr[2]);
 	return (arr);
 }
 
@@ -64,7 +62,6 @@ void	ft_assign_index(t_stack *stack)
 	int		j;
 
 	size = ft_stacksize(stack);
-	ft_printf("size: %d\n", size);
 	arr = ft_create_arr(stack, size);
 	ft_sort_int_tab(arr, size);
 	current = stack->top;

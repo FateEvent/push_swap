@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 15:16:43 by faventur          #+#    #+#             */
-/*   Updated: 2022/04/09 20:06:37 by faventur         ###   ########.fr       */
+/*   Updated: 2022/04/11 16:22:31 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,5 @@ t_node	*ft_newnode(int content)
 	stack->content = content;
 	stack->prev = NULL;
 	stack->next = NULL;
-	ft_printf("new %d\n", stack->content);
 	return (stack);
 }
