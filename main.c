@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 14:16:16 by faventur          #+#    #+#             */
-/*   Updated: 2022/04/11 00:03:02 by faventur         ###   ########.fr       */
+/*   Updated: 2022/04/11 12:03:00 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,10 @@ int	main(int argc, char *argv[])
 	ft_putchar('\n');
 	ft_displayindex(stack_a);
 
-	ft_rotate(stack_a);
-	ft_rev_rotate(stack_a);
+//	ft_rotate(stack_a);
+//	ft_rev_rotate(stack_a);
+	ft_push(stack_a, stack_b);
+	ft_push(stack_a, stack_b);
 //	ft_stackdisplay(stack_a);
 //	push_b(stack_b, stack_a);
 //	ft_stackdisplay(stack_a);
