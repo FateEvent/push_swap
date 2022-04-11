@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 21:41:32 by faventur          #+#    #+#             */
-/*   Updated: 2022/04/11 14:04:19 by faventur         ###   ########.fr       */
+/*   Updated: 2022/04/11 14:14:49 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ void	ft_push(t_stack *stack1, t_stack *stack2)
 			stack2->top->next = NULL;
 			stack2->top->prev = NULL;
 		}
-		else if (ft_stacksize(stack1) >= 2 && ft_stacksize(stack2) > 1)
+		else if (ft_stacksize(stack1) >= 2 && ft_stacksize(stack2) >= 1)
 		{
 			stack1->top = stack1->top->next;
 			stack2->top->prev = stack1->top->prev;
@@ -62,7 +62,7 @@ void	ft_push(t_stack *stack1, t_stack *stack2)
 			stack2->top->prev = NULL;
 			stack1->top->prev = NULL;
 		}
-		else
+		else if (ft_stacksize(stack1))
 			ft_push_part2(stack1, stack2);
 	}
 }
