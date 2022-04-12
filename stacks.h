@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/25 13:10:47 by faventur          #+#    #+#             */
-/*   Updated: 2022/04/11 17:07:08 by faventur         ###   ########.fr       */
+/*   Updated: 2022/04/12 12:32:17 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,14 +46,12 @@ int		ft_check_args(int argc, char *argv[]);
 void	ft_puterror(const char *str);
 void	ft_assign_index(t_stack *stack);
 void	ft_sort_int_tab(int	*tab, int size);
+void	ft_issorted(t_stack *stack);
 
 void	ft_swap(t_stack *stack);
 void	ft_push(t_stack *stack1, t_stack *stack2);
 void	ft_rotate(t_stack *stack);
 void	ft_rev_rotate(t_stack *stack);
-
-void	radix_sort(t_stack *stack1, t_stack *stack2, int size);
-
 void	sa(t_stack *stack_a);
 void	sb(t_stack *stack_b);
 void	ss(t_stack *stack_a, t_stack *stack_b);
@@ -65,5 +63,7 @@ void	rr(t_stack *stack_a, t_stack *stack_b);
 void	rra(t_stack *stack_a);
 void	rrb(t_stack *stack_b);
 void	rrr(t_stack *stack_a, t_stack *stack_b);
+
+void	radix_sort(t_stack *stack1, t_stack *stack2, int size);
 
 #endif

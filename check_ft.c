@@ -1,16 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   check.c                                            :+:      :+:    :+:   */
+/*   check_ft.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/09 11:31:50 by faventur          #+#    #+#             */
-/*   Updated: 2022/04/09 11:32:09 by faventur         ###   ########.fr       */
+/*   Updated: 2022/04/12 12:31:43 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "stacks.h"
+
+void	ft_issorted(t_stack *stack)
+{
+	t_node	*current;
+	int		size;
+	int		i;
+
+
+	size = ft_stacksize(stack);
+	i = 0;
+	current = stack->top;
+	while (current->next != NULL)
+	{
+		if (current->index > current->next->index)
+			return (0);
+		current = current->next;
+	}
+	return (1);
+}
 
 static int	ft_isnumber(char *nptr)
 {
@@ -22,19 +41,31 @@ static int	ft_isnumber(char *nptr)
 	while (nptr[i])
 	{
 		if (!ft_isdigit(nptr[i]))
+		{
+			ft_printf("isdig\n");
 			return (0);
+		}
 		i++;
 	}
 	return (1);
 }
 
-static int	ft_repeat(char *nptr, char *args[], int i)
+static int	ft_repeat(long tmp, char *args[], int index)
 {
-	while (args[++i])
+	long	tester;
+
+	while (args[index])
 	{
-		if (!ft_strequ(nptr, args[i]))
+		tester = ft_atoi(args[index]);
+		ft_printf("testing %d\n%d\n", tester, tmp);
+		ft_printf("atoi %d\n", ft_atoi(args[7]));
+		ft_printf("atoi %d\n", ft_atoi("98"));
+		if (tester == tmp)
+		{
+			ft_printf("test %d", tester);
 			return (0);
-		i++;
+		}
+		index++;
 	}
 	return (1);
 }
@@ -46,6 +77,7 @@ int	ft_check_args(int argc, char *argv[])
 	int		i;
 
 	i = 0;
+	arg_arr = 0x0;
 	if (argc == 2)
 		arg_arr = ft_split(argv[1], ' ');
 	else
@@ -57,7 +89,7 @@ int	ft_check_args(int argc, char *argv[])
 	{
 		tmp = ft_atoi(arg_arr[i]);
 		if (!ft_isnumber(arg_arr[i]) || tmp > 2147483647 || tmp < -2147483648
-			|| !ft_repeat(arg_arr[i], arg_arr, i))
+			|| !ft_repeat(tmp, arg_arr, i))
 			ft_puterror("Error!");
 		i++;
 	}
