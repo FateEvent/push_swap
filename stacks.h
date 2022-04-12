@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/25 13:10:47 by faventur          #+#    #+#             */
-/*   Updated: 2022/04/12 16:29:09 by faventur         ###   ########.fr       */
+/*   Updated: 2022/04/12 18:59:03 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,10 +67,11 @@ void	rrr(t_stack *stack_a, t_stack *stack_b);
 
 int		find_max(t_stack *stack);
 int		find_min(t_stack *stack);
+int		find_next_min(t_stack *stack);
 
 void	sort_two(t_stack *stack);
 void	sort_three(t_stack *stack, int max, int min);
-void	sort_four(t_stack *stack1, t_stack *stack2);
+void	sort_four(t_stack *stack1, t_stack *stack2, int max, int min);
 void	radix_sort(t_stack *stack1, t_stack *stack2, int size);
 
 #endif

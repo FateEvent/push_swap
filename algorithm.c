@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/11 14:41:02 by faventur          #+#    #+#             */
-/*   Updated: 2022/04/12 17:39:13 by faventur         ###   ########.fr       */
+/*   Updated: 2022/04/12 20:08:00 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,64 +39,50 @@ void	sort_three(t_stack *stack, int max, int min)
 		ra(stack);
 	}
 	else
+	{
+		ft_printf("asort3 %d\n", stack->length);
 		rra(stack);
+	}
 }
-/*
+
 void	sort_four(t_stack *stack1, t_stack *stack2, int max, int min)
 {
-	t_node	*current;
-	int		min;
+	int		median;
 
-	current = stack2->top;
 	pb(stack1, stack2);
 	min = find_min(stack1);
-	sort_three(stack1);
-	if (current->index > max)
+	median = find_next_min(stack1);
+	max = find_max(stack1);
+	sort_three(stack1, max, min);
+	if (stack2->top->index > max)
 	{
 		pa(stack2, stack1);
+		ft_printf("a4 %d\n", stack1->length);
+		ft_printf("b4 %d\n", stack2->length);
 		ra(stack1);
+		ft_printf("asort3b %d\n", stack1->length);
+		ft_printf("sorted %d\n", ft_issorted(stack1));
+		ft_stackdisplay(stack1);
+		ft_displayindex(stack1);
 	}
-	if (current->index > median)
+	else if (stack2->top->index > median && stack2->top->index < max)
 	{
 		ra(stack1);
 		pa(stack2, stack1);
 		sa(stack1);
 		rra(stack1);
 	}
-	if (current->index > min && current->index < median)
+	else if (stack2->top->index < median && stack2->top->index > min)
 	{
 		ra(stack1);
 		pa(stack2, stack1);
-		sa(stack1);
 		rra(stack1);
 	}
-
-
-
-
-	int		min;
-	int		i;
-
-	min = find_min(stack1);
-	i = 0;
-	while (i < ft_stacksize(stack1))
-	{
-		if (stack1->top->index == min)
-			pb(stack1, stack2);
-		else if (stack1->bottom->index == min)
-		{
-			rra(stack1);
-			pb(stack1, stack2);
-		}
-		else
-			ra(stack1);
-		i++;
-	}
-	sort_three(stack1);
-	pa(stack1, stack2);
-	
+	else
+		pa(stack2, stack1);
 }
 
+/*
 void	sort_five(t_stack *stack1, t_stack *stack2)
 {
 	int	size;

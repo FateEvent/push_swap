@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 14:16:16 by faventur          #+#    #+#             */
-/*   Updated: 2022/04/12 17:55:01 by faventur         ###   ########.fr       */
+/*   Updated: 2022/04/12 20:14:58 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,15 +29,18 @@ int	main(int argc, char *argv[])
 	min = find_min(stack_a);
 	size = ft_stacksize(stack_a);
 
-	if (stack_a->length == 2 && !ft_issorted(stack_a))
-		sort_two(stack_a);
-	if (stack_a->length == 3 && !ft_issorted(stack_a))
-		sort_three(stack_a, max, min);
-//	if (ft_stacksize(stack_a) == 4 && !ft_issorted(stack_a))
-//		sort_four(stack_a, stack_b);
-	else if (stack_a->length > 3 && !ft_issorted(stack_a))
-		radix_sort(stack_a, stack_b, size);
-//	ft_stackdisplay(stack_a);
+	if (!ft_issorted(stack_a))
+	{
+		if (stack_a->length == 2)
+			sort_two(stack_a);
+		else if (stack_a->length == 3)
+			sort_three(stack_a, max, min);
+		else if (ft_stacksize(stack_a) == 4)
+			sort_four(stack_a, stack_b, max, min);
+		else if (stack_a->length > 4)
+			radix_sort(stack_a, stack_b, size);
+	}
+	ft_stackdisplay(stack_a);
 /*
 	t_node *current = stack_a->top;
 	while (current != NULL)
