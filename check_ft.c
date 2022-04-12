@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/09 11:31:50 by faventur          #+#    #+#             */
-/*   Updated: 2022/04/12 17:09:51 by faventur         ###   ########.fr       */
+/*   Updated: 2022/04/12 17:48:09 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,12 +57,8 @@ static int	ft_repeat(long tmp, char *args[], int index)
 	while (args[++index] != NULL)
 	{
 		tester = ft_atoi(args[index]);
-//		ft_printf("testing %d\n%d\n", tester, tmp);
 		if (tester == tmp)
-		{
-//			ft_printf("test %d", tester);
 			return (0);
-		}
 	}
 	return (1);
 }
