@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 21:41:32 by faventur          #+#    #+#             */
-/*   Updated: 2022/04/12 20:14:03 by faventur         ###   ########.fr       */
+/*   Updated: 2022/04/12 21:17:36 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ static void	ft_push_part2(t_stack *stack1, t_stack *stack2)
 
 void	ft_push(t_stack *stack1, t_stack *stack2)
 {
-	if (stack1 != NULL && stack2 != NULL && stack2->length > 0)
+	if (stack1 != NULL && stack2 != NULL && stack1->length > 0)
 	{
 		if (stack1->length >= 2 && stack2->top == NULL)
 		{
@@ -80,7 +80,7 @@ void	ft_push(t_stack *stack1, t_stack *stack2)
 
 void	ft_rotate(t_stack *stack)
 {
-	if (stack != NULL && stack->length > 1)
+	if (stack != NULL && stack->length > 2)
 	{
 		stack->top->prev = stack->bottom;
 		stack->bottom->next = stack->top;
@@ -88,21 +88,13 @@ void	ft_rotate(t_stack *stack)
 		stack->top = stack->top->next;
 		stack->bottom->next = NULL;
 	}
-/*	else if (stack != NULL && stack->length > 1)
-	{
-		stack->bottom = stack->top;
-		stack->top = stack->top->next;
-		stack->bottom->prev = stack->top;
-		stack->top->next = stack->bottom;
-		stack->bottom->next = NULL;
-		stack->top->prev = NULL;
-	}
-	*/
+	else if (stack != NULL && stack->length > 1)
+		ft_swap(stack);
 }
 
 void	ft_rev_rotate(t_stack *stack)
 {
-	if (stack != NULL && stack->length > 1)
+	if (stack != NULL && stack->length > 2)
 	{
 		stack->top->prev = stack->bottom;
 		stack->bottom->next = stack->top;
@@ -110,14 +102,6 @@ void	ft_rev_rotate(t_stack *stack)
 		stack->bottom = stack->bottom->prev;
 		stack->bottom->next = NULL;
 	}
-/*	else if (stack != NULL && stack->length > 1)
-	{
-		stack->bottom = stack->top;
-		stack->top = stack->top->next;
-		stack->bottom->prev = stack->top;
-		stack->top->next = stack->bottom;
-		stack->bottom->next = NULL;
-		stack->top->prev = NULL;
-	}
-	*/
+	else if (stack != NULL && stack->length > 1)
+		ft_swap(stack);
 }

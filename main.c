@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 14:16:16 by faventur          #+#    #+#             */
-/*   Updated: 2022/04/12 20:14:58 by faventur         ###   ########.fr       */
+/*   Updated: 2022/04/12 21:22:33 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,13 +40,4 @@ int	main(int argc, char *argv[])
 		else if (stack_a->length > 4)
 			radix_sort(stack_a, stack_b, size);
 	}
-	ft_stackdisplay(stack_a);
-/*
-	t_node *current = stack_a->top;
-	while (current != NULL)
-	{
-		ft_printf("num %d, ind %d\n", current->content, current->index);
-		current = current->next;
-	}
-*/
 }

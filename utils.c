@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 18:15:08 by faventur          #+#    #+#             */
-/*   Updated: 2022/04/12 17:16:46 by faventur         ###   ########.fr       */
+/*   Updated: 2022/04/12 21:56:11 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,7 +84,7 @@ void	ft_assign_index(t_stack *stack)
 void	ft_puterror(const char *str)
 {
 	ft_putendl_fd(str, 2);
-	exit(EXIT_FAILURE);
+	exit(0);
 }
 
 void	ft_stack_init(int argc, char *argv[], t_stack *stack)
