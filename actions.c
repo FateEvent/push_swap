@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 21:41:32 by faventur          #+#    #+#             */
-/*   Updated: 2022/04/11 14:14:49 by faventur         ###   ########.fr       */
+/*   Updated: 2022/04/12 17:37:37 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,15 @@
 void	ft_swap(t_stack *stack)
 {
 	if (stack != NULL && ft_stacksize(stack) > 1)
+	{
+		stack->bottom = stack->top;
+		stack->top = stack->top->next;
+		stack->bottom->prev = stack->top;
+		stack->top->next = stack->bottom;
+		stack->bottom->next = NULL;
+		stack->top->prev = NULL;
+	}
+	else if (stack != NULL && ft_stacksize(stack) > 2)
 	{
 		stack->top = stack->top->next;
 		stack->top->prev->next = stack->top->next;
@@ -65,6 +74,8 @@ void	ft_push(t_stack *stack1, t_stack *stack2)
 		else if (ft_stacksize(stack1))
 			ft_push_part2(stack1, stack2);
 	}
+	stack1->length--;
+	stack1->length++;
 }
 
 void	ft_rotate(t_stack *stack)

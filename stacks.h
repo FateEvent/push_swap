@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/25 13:10:47 by faventur          #+#    #+#             */
-/*   Updated: 2022/04/12 12:32:17 by faventur         ###   ########.fr       */
+/*   Updated: 2022/04/12 16:29:09 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,12 +46,13 @@ int		ft_check_args(int argc, char *argv[]);
 void	ft_puterror(const char *str);
 void	ft_assign_index(t_stack *stack);
 void	ft_sort_int_tab(int	*tab, int size);
-void	ft_issorted(t_stack *stack);
+int		ft_issorted(t_stack *stack);
 
 void	ft_swap(t_stack *stack);
 void	ft_push(t_stack *stack1, t_stack *stack2);
 void	ft_rotate(t_stack *stack);
 void	ft_rev_rotate(t_stack *stack);
+
 void	sa(t_stack *stack_a);
 void	sb(t_stack *stack_b);
 void	ss(t_stack *stack_a, t_stack *stack_b);
@@ -64,6 +65,12 @@ void	rra(t_stack *stack_a);
 void	rrb(t_stack *stack_b);
 void	rrr(t_stack *stack_a, t_stack *stack_b);
 
+int		find_max(t_stack *stack);
+int		find_min(t_stack *stack);
+
+void	sort_two(t_stack *stack);
+void	sort_three(t_stack *stack, int max, int min);
+void	sort_four(t_stack *stack1, t_stack *stack2);
 void	radix_sort(t_stack *stack1, t_stack *stack2, int size);
 
 #endif

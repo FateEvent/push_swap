@@ -6,27 +6,27 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/09 11:31:50 by faventur          #+#    #+#             */
-/*   Updated: 2022/04/12 12:31:43 by faventur         ###   ########.fr       */
+/*   Updated: 2022/04/12 17:09:51 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "stacks.h"
 
-void	ft_issorted(t_stack *stack)
+int	ft_issorted(t_stack *stack)
 {
 	t_node	*current;
-	int		size;
-	int		i;
 
-
-	size = ft_stacksize(stack);
-	i = 0;
-	current = stack->top;
-	while (current->next != NULL)
+	if (stack != NULL)
 	{
-		if (current->index > current->next->index)
-			return (0);
-		current = current->next;
+		current = stack->top;
+		while (current->next != NULL)
+		{
+			if (current->index > current->next->index)
+			{
+				return (0);
+			}
+			current = current->next;
+		}
 	}
 	return (1);
 }
@@ -54,18 +54,15 @@ static int	ft_repeat(long tmp, char *args[], int index)
 {
 	long	tester;
 
-	while (args[index])
+	while (args[++index] != NULL)
 	{
 		tester = ft_atoi(args[index]);
-		ft_printf("testing %d\n%d\n", tester, tmp);
-		ft_printf("atoi %d\n", ft_atoi(args[7]));
-		ft_printf("atoi %d\n", ft_atoi("98"));
+//		ft_printf("testing %d\n%d\n", tester, tmp);
 		if (tester == tmp)
 		{
-			ft_printf("test %d", tester);
+//			ft_printf("test %d", tester);
 			return (0);
 		}
-		index++;
 	}
 	return (1);
 }
@@ -78,6 +75,8 @@ int	ft_check_args(int argc, char *argv[])
 
 	i = 0;
 	arg_arr = 0x0;
+	if (argc == 1)
+		ft_puterror("Error!");
 	if (argc == 2)
 		arg_arr = ft_split(argv[1], ' ');
 	else
