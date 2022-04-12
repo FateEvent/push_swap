@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/12 13:32:15 by faventur          #+#    #+#             */
-/*   Updated: 2022/04/12 19:50:28 by faventur         ###   ########.fr       */
+/*   Updated: 2022/04/12 22:08:32 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,20 +62,3 @@ int	find_next_min(t_stack *stack)
 	}
 	return (next_min);
 }
-
-/*
-void	sorting_algo(t_stack *stack1, t_stack stack2)
-{
-	if (!ft_issorted(stack_a))
-	{
-		if (stack_a->length == 2)
-			sort_two(stack_a);
-		else if (stack_a->length == 3)
-			sort_three(stack_a, max, min);
-		else if (ft_stacksize(stack_a) == 4)
-			sort_four(stack_a, stack_b, max, min);
-		else if (stack_a->length > 4)
-			radix_sort(stack_a, stack_b, size);
-	}
-}
-*/

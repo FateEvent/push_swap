@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 14:16:16 by faventur          #+#    #+#             */
-/*   Updated: 2022/04/12 21:22:33 by faventur         ###   ########.fr       */
+/*   Updated: 2022/04/12 22:29:23 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,9 +35,10 @@ int	main(int argc, char *argv[])
 			sort_two(stack_a);
 		else if (stack_a->length == 3)
 			sort_three(stack_a, max, min);
-		else if (ft_stacksize(stack_a) == 4)
-			sort_four(stack_a, stack_b, max, min);
+		else if (stack_a->length == 4)
+			sort_four(stack_a, stack_b);
 		else if (stack_a->length > 4)
 			radix_sort(stack_a, stack_b, size);
 	}
+	ft_stackdisplay(stack_a);
 }

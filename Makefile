@@ -6,12 +6,12 @@
 #    By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/10 17:53:32 by faventur          #+#    #+#              #
-#    Updated: 2022/04/12 13:43:20 by faventur         ###   ########.fr        #
+#    Updated: 2022/04/12 22:09:54 by faventur         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS = 	main.c check_ft.c utils.c actions.c algorithm.c rules1.c \
-	rules2.c rules3.c position.c ft_stacknew.c ft_newnode.c \
+SRCS = 	main.c check_ft.c utils.c actions.c algorithm.c algorithm2.c \
+	rules1.c rules2.c rules3.c position.c ft_stacknew.c ft_newnode.c \
 	ft_stackadd_top.c ft_stackadd_bottom.c ft_stackinsert.c \
 	ft_stackclear.c ft_stacksize.c ft_stackdisplay.c
 
