@@ -6,7 +6,7 @@
 #    By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/10 17:53:32 by faventur          #+#    #+#              #
-#    Updated: 2022/04/13 20:22:40 by faventur         ###   ########.fr        #
+#    Updated: 2022/04/13 22:32:01 by faventur         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -62,6 +62,7 @@ $(NAME_B): $(OBJSB)
 	@mv ./libft/libft.a .
 	@gcc $(FLAGS) $(OBJS) $(LINKS) libft.a -o $(NAME)
 	@gcc $(FLAGS) $(OBJSB) $(LINKS) libft.a -o $(NAME_B)
+	@rm $(OBJSB)
 
 clean:
 	@$(RM) $(OBJS) libft.a
