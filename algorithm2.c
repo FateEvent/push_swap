@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/12 22:08:20 by faventur          #+#    #+#             */
-/*   Updated: 2022/04/13 18:57:02 by faventur         ###   ########.fr       */
+/*   Updated: 2022/04/13 19:28:27 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,13 +35,13 @@ static int	sort_five_get_min(t_stack *stack1)
 	return (i - j);
 }
 
-void	sort_five(t_stack *stack1, t_stack *stack2)
+static void	sort_five_loop(t_stack *stack1)
 {
 	int		min;
 	int		i;
 
 	min = find_min(stack1);
-	i = sort_five_get_min(stack1) < 0;
+	i = sort_five_get_min(stack1);
 	while (stack1->top->index != min)
 	{
 		if (i < 0)
@@ -49,9 +49,22 @@ void	sort_five(t_stack *stack1, t_stack *stack2)
 		else
 			rra(stack1);
 	}
+}
+
+void	sort_five(t_stack *stack1, t_stack *stack2)
+{
+	int		max;
+	int		min;
+
+	sort_five_loop(stack1);
 	pb(stack1, stack2);
+	sort_five_loop(stack1);
+	pb(stack1, stack2);
+	min = find_min(stack1);
+	max = find_max(stack1);
 	if (!ft_issorted(stack1))
-		sort_four(stack1, stack2);
+		sort_three(stack1, max, min);
+	pa(stack2, stack1);
 	pa(stack2, stack1);
 }
 
