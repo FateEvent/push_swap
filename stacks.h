@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/25 13:10:47 by faventur          #+#    #+#             */
-/*   Updated: 2022/04/12 22:18:26 by faventur         ###   ########.fr       */
+/*   Updated: 2022/04/13 16:23:44 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,5 +74,6 @@ void	sort_three(t_stack *stack, int max, int min);
 void	sort_four(t_stack *stack1, t_stack *stack2);
 void	sort_five(t_stack *stack1, t_stack *stack2);
 void	radix_sort(t_stack *stack1, t_stack *stack2, int size);
+void	sorting_algo(t_stack *stack1, t_stack *stack2);
 
 #endif
