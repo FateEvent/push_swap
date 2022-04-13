@@ -6,7 +6,7 @@
 #    By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/10 17:53:32 by faventur          #+#    #+#              #
-#    Updated: 2022/04/12 22:09:54 by faventur         ###   ########.fr        #
+#    Updated: 2022/04/13 20:22:40 by faventur         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,15 +15,21 @@ SRCS = 	main.c check_ft.c utils.c actions.c algorithm.c algorithm2.c \
 	ft_stackadd_top.c ft_stackadd_bottom.c ft_stackinsert.c \
 	ft_stackclear.c ft_stacksize.c ft_stackdisplay.c
 
+SRCSB =	checker.c check_ft.c utils.c actions.c algorithm.c algorithm2.c \
+	rules1.c rules2.c rules3.c position.c ft_stacknew.c ft_newnode.c \
+	ft_stackadd_top.c ft_stackadd_bottom.c ft_stackinsert.c \
+	ft_stackclear.c ft_stacksize.c ft_stackdisplay.c
+
 OBJS = $(SRCS:.c=.o)
+OBJSB = $(SRCSB:.c=.o)
 
 FLAGS = -Wall -Wextra -Werror
-
-LINKS = -lmlx -framework OpenGL -framework AppKit
 
 RM =	rm -f
 
 NAME = push_swap
+
+NAME_B = checker
 
 NONE = \033[0m
 HIRED = \033[91m
@@ -49,8 +55,13 @@ $(NAME): $(OBJS)
 $(OBJS): $(SRCS)
 	@gcc $(FLAGS) -c $(SRCS)
 
-exe: all
-	@./$(NAME)
+bonus: ${NAME_B}
+
+$(NAME_B): $(OBJSB)
+	@$(MAKE) -sC ./libft
+	@mv ./libft/libft.a .
+	@gcc $(FLAGS) $(OBJS) $(LINKS) libft.a -o $(NAME)
+	@gcc $(FLAGS) $(OBJSB) $(LINKS) libft.a -o $(NAME_B)
 
 clean:
 	@$(RM) $(OBJS) libft.a
