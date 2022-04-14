@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 21:41:32 by faventur          #+#    #+#             */
-/*   Updated: 2022/04/14 14:27:30 by faventur         ###   ########.fr       */
+/*   Updated: 2022/04/14 14:30:15 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,8 +60,6 @@ void	ft_push(t_stack *stack1, t_stack *stack2)
 {
 	if (stack1->length >= 1 && stack2->length >= 0)
 	{
-		ft_printf("ca rentre?");
-		ft_printf("len1 %d, len2 %d\n", stack1->length, stack2->length);
 		if (stack1->length >= 2 && stack2->length >= 1)
 		{
 			stack1->top = stack1->top->next;

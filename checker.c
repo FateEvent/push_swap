@@ -6,13 +6,14 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 19:45:42 by faventur          #+#    #+#             */
-/*   Updated: 2022/04/13 22:16:00 by faventur         ###   ########.fr       */
+/*   Updated: 2022/04/14 15:41:05 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "checker.h"
+#include <stdio.h>
 
-void	ft_exec(t_stack *stack1, t_stack *stack2, char *buffer)
+int	ft_exec(t_stack *stack1, t_stack *stack2, char *buffer)
 {
 	if (ft_strequ(buffer, "sa\n"))
 		sa(stack1);
@@ -37,7 +38,8 @@ void	ft_exec(t_stack *stack1, t_stack *stack2, char *buffer)
 	else if (ft_strequ(buffer, "rrr\n"))
 		rrr(stack1, stack2);
 	else
-		ft_putendl("Error");
+		ft_puterror("Error");
+	return (1);
 }
 
 void	ft_stdout_reader(t_stack *stack1, t_stack *stack2)
@@ -47,10 +49,15 @@ void	ft_stdout_reader(t_stack *stack1, t_stack *stack2)
 	buffer = get_next_line(0);
 	while (buffer)
 	{
-		ft_exec(stack1, stack2, buffer);
-		free(buffer);
+		if (!ft_exec(stack1, stack2, buffer))
+			ft_putendl("Error");
 		buffer = get_next_line(0);
 	}
+	free(buffer);
+	if (ft_issorted(stack1))
+		ft_putendl("OK");
+	else
+		ft_putendl("KO");
 }
 
 int	main(int argc, char *argv[])
