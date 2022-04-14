@@ -6,7 +6,7 @@
 #    By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/10 17:53:32 by faventur          #+#    #+#              #
-#    Updated: 2022/04/14 22:19:56 by faventur         ###   ########.fr        #
+#    Updated: 2022/04/14 23:48:10 by faventur         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,6 +32,7 @@ NAME_B = checker
 
 NONE = \033[0m
 HIRED = \033[91m
+HIBLUE = \033[94m
 HIMAGENTA = \033[95m
 HICYAN = \033[96m
 GREEN =	\033[32m
@@ -44,12 +45,12 @@ $(NAME): $(OBJS)
 	@$(MAKE) -sC ./libft
 	@mv ./libft/libft.a .
 	@gcc $(FLAGS) $(OBJS) $(LINKS) libft.a -o $(NAME)
-	@echo "$(HIMAGENTA)Curious... very curious... I remember every wand I've ever$(NONE)"
-	@echo "$(GREEN)sold, Mr. Potter. It so happens that the phoenix whose tail-$(NONE)"
-	@echo "$(YELLOW)feather resides in your wand gave another feather... Just one$(NONE)"
-	@echo "$(HIRED)other. It is curious that you should be destined for this wand$(NONE)"
-	@echo "$(HICYAN)when its brother gave you that scar.$(NONE) Ollivander, $(CURSIVE)Harry Potter$(NONE)"
-	@echo "$(CURSIVE)and the Philosopher's Stone$(NONE)"
+	@echo "$(HIMAGENTA)Curious... very curious... I remember every wand I've ever sold,$(NONE)"
+	@echo "$(GREEN)Mr. Potter. Every single wand. It so happens that the phoenix$(NONE)"
+	@echo "$(YELLOW)whose tail feather resides in your wand gave another feather...$(NONE)"
+	@echo "$(HIRED)Just one other. It is very curious indeed that you should be$(NONE)"
+	@echo "$(HICYAN)destined for this wand when its brother - why, its brother gave$(NONE)"
+	@echo "$(HIBLUE)you that scar.$(NONE) Ollivander, $(CURSIVE)Harry Potter and the Philosopher's Stone$(NONE)"
 	@rm $(OBJS)
 
 $(OBJS): $(SRCS)
