@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/25 13:10:47 by faventur          #+#    #+#             */
-/*   Updated: 2022/04/13 16:23:44 by faventur         ###   ########.fr       */
+/*   Updated: 2022/04/14 16:25:56 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,7 @@ void	ft_displayindex(t_stack *stack);
 void	ft_stack_init(int argc, char *argv[], t_stack *stack);
 int		ft_check_args(int argc, char *argv[]);
 void	ft_puterror(const char *str);
+int		ft_strtolol(const char *str);
 void	ft_assign_index(t_stack *stack);
 void	ft_sort_int_tab(int	*tab, int size);
 int		ft_issorted(t_stack *stack);

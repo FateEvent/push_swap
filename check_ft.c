@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/09 11:31:50 by faventur          #+#    #+#             */
-/*   Updated: 2022/04/12 22:31:49 by faventur         ###   ########.fr       */
+/*   Updated: 2022/04/14 16:34:02 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,19 @@ int	ft_issorted(t_stack *stack)
 	return (1);
 }
 
+static int	ft_repeat(long tmp, char *args[], int index)
+{
+	long	tester;
+
+	while (args[++index] != NULL)
+	{
+		tester = ft_atoi(args[index]);
+		if (tester == tmp)
+			return (0);
+	}
+	return (1);
+}
+
 static int	ft_isnumber(char *nptr)
 {
 	int	i;
@@ -47,24 +60,38 @@ static int	ft_isnumber(char *nptr)
 	return (1);
 }
 
-static int	ft_repeat(long tmp, char *args[], int index)
+int	ft_strtolol(const char *str)
 {
-	long	tester;
+	int			i;
+	long long	rt;
+	int			pm;
 
-	while (args[++index] != NULL)
+	rt = 0;
+	i = 0;
+	pm = 1;
+	if (str[i] && (str[i] == '-' || str[i] == '+'))
 	{
-		tester = ft_atoi(args[index]);
-		if (tester == tmp)
+		if (str[i] == '-')
+			pm *= -1;
+		i++;
+	}
+	while (str[i] && str[i] >= '0' && str[i] <= '9')
+	{
+		rt = rt * 10 + (str[i] - 48);
+		if (rt * pm > 2147483647)
 			return (0);
+		else if (rt * pm < -2147483648)
+			return (0);
+		i++;
 	}
 	return (1);
 }
 
 int	ft_check_args(int argc, char *argv[])
 {
-	char	**arg_arr;
-	long	tmp;
-	int		i;
+	char		**arg_arr;
+	long long	tmp;
+	int			i;
 
 	i = 0;
 	if (argc == 1)
@@ -78,6 +105,8 @@ int	ft_check_args(int argc, char *argv[])
 	}
 	while (arg_arr[i])
 	{
+		if (!ft_strtolol(arg_arr[i]))
+			ft_puterror("Error");
 		tmp = ft_atoi(arg_arr[i]);
 		if (!ft_isnumber(arg_arr[i]) || tmp > 2147483647 || tmp < -2147483648
 			|| !ft_repeat(tmp, arg_arr, i))
