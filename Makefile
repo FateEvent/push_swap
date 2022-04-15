@@ -6,7 +6,7 @@
 #    By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/10 17:53:32 by faventur          #+#    #+#              #
-#    Updated: 2022/04/14 23:48:10 by faventur         ###   ########.fr        #
+#    Updated: 2022/04/15 14:21:24 by faventur         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,8 +19,9 @@ SRCSB =	checker.c check_ft_bonus.c utils_bonus.c actions_bonus.c \
 	rules1_bonus.c rules2_bonus.c rules3_bonus.c position_bonus.c \
 	stack_ft_bonus.c
 
-OBJS = $(SRCS:.c=.o)
-OBJSB = $(SRCSB:.c=.o)
+OBJS	= $(addprefix srcs/, ${SRCS:.c=.o})
+
+OBJSB	= $(addprefix srcsb/, ${SRCSB:.c=.o})
 
 FLAGS = -Wall -Wextra -Werror
 
@@ -50,11 +51,9 @@ $(NAME): $(OBJS)
 	@echo "$(YELLOW)whose tail feather resides in your wand gave another feather...$(NONE)"
 	@echo "$(HIRED)Just one other. It is very curious indeed that you should be$(NONE)"
 	@echo "$(HICYAN)destined for this wand when its brother - why, its brother gave$(NONE)"
-	@echo "$(HIBLUE)you that scar.$(NONE) Ollivander, $(CURSIVE)Harry Potter and the Philosopher's Stone$(NONE)"
+	@echo "$(HIBLUE)you that scar.$(NONE) Ollivander, $(CURSIVE)Harry Potter and the Philosopher's$(NONE)"
+	@echo "$(CURSIVE)Stone$(NONE)"
 	@rm $(OBJS)
-
-$(OBJS): $(SRCS)
-	@gcc $(FLAGS) -c $(SRCS)
 
 bonus: $(NAME_B)
 
@@ -68,9 +67,6 @@ $(NAME_B): $(OBJS) $(OBJSB)
 	@echo "$(HICYAN)way to greatness, there's no doubt about that. No?$(NONE) The Sorting"
 	@echo "Hat, $(CURSIVE)Harry Potter and the Philosopher's Stone$(NONE)"
 	@rm $(OBJS) $(OBJSB)
-
-$(OBJSB): $(SRCSB)
-	@gcc $(FLAGS) -c $(SRCSB)
 
 clean:
 	@$(RM) $(OBJS) $(OBJSB) libft.a
