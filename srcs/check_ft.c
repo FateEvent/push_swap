@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/09 11:31:50 by faventur          #+#    #+#             */
-/*   Updated: 2022/04/15 13:59:43 by faventur         ###   ########.fr       */
+/*   Updated: 2022/04/15 15:22:39 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,8 @@ static int	ft_isnumber(char *nptr)
 	i = 0;
 	if (nptr[i] == '-')
 		i++;
+	if (nptr[i] == ' ' || nptr[i] == '\0')
+		return (0);
 	while (nptr[i])
 	{
 		if (!ft_isdigit(nptr[i]))
@@ -63,7 +65,6 @@ static int	ft_isnumber(char *nptr)
 int	ft_check_args(int argc, char *argv[])
 {
 	char		**arg_arr;
-	long long	tmp;
 	int			i;
 
 	i = 0;
@@ -80,11 +81,12 @@ int	ft_check_args(int argc, char *argv[])
 		exit(0);
 	while (arg_arr[i])
 	{
-		tmp = ft_atoi(arg_arr[i]);
 		if (!ft_strtolol(arg_arr[i]) || !ft_isnumber(arg_arr[i])
-			|| !ft_repeat(tmp, arg_arr, i))
+			|| !ft_repeat(ft_atoi(arg_arr[i]), arg_arr, i))
 			ft_puterror("Error");
 		i++;
 	}
+	if (argc == 2)
+		free(arg_arr);
 	return (0);
 }

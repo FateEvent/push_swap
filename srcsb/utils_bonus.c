@@ -6,32 +6,11 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 18:15:08 by faventur          #+#    #+#             */
-/*   Updated: 2022/04/15 14:03:57 by faventur         ###   ########.fr       */
+/*   Updated: 2022/04/15 15:19:13 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/checker.h"
-
-void	ft_sort_int_tab(int	*tab, int size)
-{
-	int	i;
-	int	temp;
-
-	i = 0;
-	temp = 0;
-	while (i < size - 1)
-	{
-		if (tab[i] > tab[i + 1])
-		{
-			temp = tab[i];
-			tab[i] = tab[i + 1];
-			tab[i + 1] = temp;
-			i = 0;
-		}
-		else
-			i++;
-	}
-}
 
 static int	*ft_create_arr(t_stack *stack, int size)
 {
@@ -105,4 +84,6 @@ void	ft_stack_init(int argc, char *argv[], t_stack *stack)
 		ft_stackadd_bottom(stack, ft_newnode(ft_atoi(arg_arr[i])));
 		i++;
 	}
+	if (argc == 2)
+		free(arg_arr);
 }

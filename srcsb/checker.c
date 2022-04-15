@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 19:45:42 by faventur          #+#    #+#             */
-/*   Updated: 2022/04/15 14:03:27 by faventur         ###   ########.fr       */
+/*   Updated: 2022/04/15 15:07:54 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ void	ft_stdout_reader(t_stack *stack1, t_stack *stack2)
 	while (buffer)
 	{
 		if (!ft_exec(stack1, stack2, buffer))
-			ft_putendl("Error");
+			ft_puterror("Error");
 		buffer = get_next_line(0);
 	}
 	free(buffer);
