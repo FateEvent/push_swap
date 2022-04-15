@@ -6,7 +6,7 @@
 #    By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/10 17:53:32 by faventur          #+#    #+#              #
-#    Updated: 2022/04/15 14:21:24 by faventur         ###   ########.fr        #
+#    Updated: 2022/04/15 17:53:09 by faventur         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,7 +45,7 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	@$(MAKE) -sC ./libft
 	@mv ./libft/libft.a .
-	@gcc $(FLAGS) $(OBJS) $(LINKS) libft.a -o $(NAME)
+	@gcc $(FLAGS) $(OBJS) libft.a -o $(NAME)
 	@echo "$(HIMAGENTA)Curious... very curious... I remember every wand I've ever sold,$(NONE)"
 	@echo "$(GREEN)Mr. Potter. Every single wand. It so happens that the phoenix$(NONE)"
 	@echo "$(YELLOW)whose tail feather resides in your wand gave another feather...$(NONE)"
@@ -60,8 +60,8 @@ bonus: $(NAME_B)
 $(NAME_B): $(OBJS) $(OBJSB)
 	@$(MAKE) -sC ./libft
 	@mv ./libft/libft.a .
-	@gcc $(FLAGS) $(OBJS) $(LINKS) libft.a -o $(NAME)
-	@gcc $(FLAGS) $(OBJSB) $(LINKS) libft.a -o $(NAME_B)
+	@gcc $(FLAGS) $(OBJS) libft.a -o $(NAME)
+	@gcc $(FLAGS) $(OBJSB) libft.a -o $(NAME_B)
 	@echo "$(GREEN)Not Slytherin, eh? Are you sure? You could be great, you know.$(NONE)"
 	@echo "$(YELLOW)It's all here in your head. And Slytherin will help you on the$(NONE)"
 	@echo "$(HICYAN)way to greatness, there's no doubt about that. No?$(NONE) The Sorting"
@@ -69,7 +69,7 @@ $(NAME_B): $(OBJS) $(OBJSB)
 	@rm $(OBJS) $(OBJSB)
 
 clean:
-	@$(RM) $(OBJS) $(OBJSB) libft.a
+	@$(RM) libft.a $(OBJS) $(OBJSB)
 	@$(MAKE) clean -C ./libft
 
 fclean: clean
