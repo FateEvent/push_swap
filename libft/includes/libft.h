@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/05 22:19:34 by faventur          #+#    #+#             */
-/*   Updated: 2022/04/15 15:14:28 by faventur         ###   ########.fr       */
+/*   Updated: 2022/04/15 16:57:34 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,7 +98,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 //Addenda
 void	ft_sort_int_tab(int	*tab, int size);
 int		ft_power(int n, int power);
-char	mt_binary2char(char *binary);
+char	ft_binary2char(char *binary);
 int		ft_strtolol(const char *str);
 
 #endif
