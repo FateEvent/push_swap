@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/09 11:31:50 by faventur          #+#    #+#             */
-/*   Updated: 2022/04/15 15:22:39 by faventur         ###   ########.fr       */
+/*   Updated: 2022/04/15 19:42:04 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ int	ft_check_args(int argc, char *argv[])
 
 	i = 0;
 	if (argc == 1)
-		ft_puterror("Error");
+		exit(0);
 	if (argc == 2)
 		arg_arr = ft_split(argv[1], ' ');
 	else
