@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 19:58:09 by faventur          #+#    #+#             */
-/*   Updated: 2022/04/18 17:13:17 by faventur         ###   ########.fr       */
+/*   Updated: 2022/04/18 17:20:59 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include <fcntl.h>
 # include <sys/types.h>
 # include "stacks.h"
-# include "../libft/includes/get_next_line.h"
+# include "get_next_line.h"
 
 void	sa_bonus(t_stack *stack_a);
 void	sb_bonus(t_stack *stack_b);

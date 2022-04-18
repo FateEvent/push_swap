@@ -6,15 +6,15 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/25 13:10:47 by faventur          #+#    #+#             */
-/*   Updated: 2022/04/15 13:58:56 by faventur         ###   ########.fr       */
+/*   Updated: 2022/04/18 17:20:52 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef STACKS_H
 # define STACKS_H
 
-# include "../libft/includes/libft.h"
-# include "../libft/includes/ft_printf.h"
+# include "libft.h"
+# include "ft_printf.h"
 
 typedef struct s_node
 {

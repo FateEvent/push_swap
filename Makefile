@@ -6,7 +6,7 @@
 #    By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/10 17:53:32 by faventur          #+#    #+#              #
-#    Updated: 2022/04/18 17:11:00 by faventur         ###   ########.fr        #
+#    Updated: 2022/04/18 17:20:33 by faventur         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,7 +32,7 @@ NAME = push_swap
 NAME_B = checker
 
 .c.o:
-		gcc -Wall -Wextra -Werror -c -I./includes $< -o ${<:.c=.o}
+		gcc -Wall -Wextra -Werror -c -I./includes -I./libft/includes $< -o ${<:.c=.o}
 
 NONE = \033[0m
 HIRED = \033[91m
