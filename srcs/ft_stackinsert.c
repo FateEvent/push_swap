@@ -6,11 +6,11 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/10 17:36:14 by faventur          #+#    #+#             */
-/*   Updated: 2022/04/15 14:00:18 by faventur         ###   ########.fr       */
+/*   Updated: 2022/04/18 17:08:36 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/stacks.h"
+#include "stacks.h"
 
 static void	ft_nodelinker(t_stack *stack, t_node *current, t_node *new)
 {

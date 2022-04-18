@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 17:13:51 by faventur          #+#    #+#             */
-/*   Updated: 2022/04/15 14:00:29 by faventur         ###   ########.fr       */
+/*   Updated: 2022/04/18 17:08:19 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 ** passed as a parameter.
 */
 
-#include "../includes/stacks.h"
+#include "stacks.h"
 
 int	ft_stacksize(t_stack *stack)
 {

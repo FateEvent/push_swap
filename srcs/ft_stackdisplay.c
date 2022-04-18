@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 22:50:05 by faventur          #+#    #+#             */
-/*   Updated: 2022/04/15 14:00:14 by faventur         ###   ########.fr       */
+/*   Updated: 2022/04/18 17:08:42 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 ** the stack passed as a parameter.
 */
 
-#include "../includes/stacks.h"
+#include "stacks.h"
 
 void	ft_stackdisplay(t_stack *stack)
 {

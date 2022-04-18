@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/28 09:53:37 by faventur          #+#    #+#             */
-/*   Updated: 2022/04/15 14:00:09 by faventur         ###   ########.fr       */
+/*   Updated: 2022/04/18 17:08:51 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 ** by using free(3). Finally, the initial pointer is set to NULL.
 */
 
-#include "../includes/stacks.h"
+#include "stacks.h"
 
 void	ft_stackclear(t_stack **stack)
 {

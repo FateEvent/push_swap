@@ -6,11 +6,11 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 19:45:42 by faventur          #+#    #+#             */
-/*   Updated: 2022/04/15 15:07:54 by faventur         ###   ########.fr       */
+/*   Updated: 2022/04/18 17:11:25 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/checker.h"
+#include "checker.h"
 //#include <stdio.h>
 
 int	ft_exec(t_stack *stack1, t_stack *stack2, char *buffer)

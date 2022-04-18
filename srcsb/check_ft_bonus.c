@@ -6,11 +6,11 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/09 11:31:50 by faventur          #+#    #+#             */
-/*   Updated: 2022/04/15 19:41:41 by faventur         ###   ########.fr       */
+/*   Updated: 2022/04/18 17:11:18 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/checker.h"
+#include "checker.h"
 
 int	ft_issorted(t_stack *stack)
 {

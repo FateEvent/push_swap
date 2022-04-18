@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 15:16:43 by faventur          #+#    #+#             */
-/*   Updated: 2022/04/15 13:59:52 by faventur         ###   ########.fr       */
+/*   Updated: 2022/04/18 17:09:06 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 ** set to NULL.
 */
 
-#include "../includes/stacks.h"
+#include "stacks.h"
 
 t_node	*ft_newnode(int content)
 {

@@ -6,11 +6,11 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/09 11:31:50 by faventur          #+#    #+#             */
-/*   Updated: 2022/04/15 19:42:04 by faventur         ###   ########.fr       */
+/*   Updated: 2022/04/18 17:09:14 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/stacks.h"
+#include "stacks.h"
 
 int	ft_issorted(t_stack *stack)
 {

@@ -6,11 +6,11 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/11 16:54:00 by faventur          #+#    #+#             */
-/*   Updated: 2022/04/15 14:00:38 by faventur         ###   ########.fr       */
+/*   Updated: 2022/04/18 17:09:46 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/stacks.h"
+#include "stacks.h"
 
 void	sa(t_stack *stack_a)
 {

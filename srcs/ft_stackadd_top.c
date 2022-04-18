@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 16:52:37 by faventur          #+#    #+#             */
-/*   Updated: 2022/04/15 13:59:46 by faventur         ###   ########.fr       */
+/*   Updated: 2022/04/18 17:08:56 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 ** passed as a parameter.
 */
 
-#include "../includes/stacks.h"
+#include "stacks.h"
 
 t_stack	*ft_stackadd_top(t_stack *stack, t_node *new)
 {

@@ -6,11 +6,11 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/12 22:08:20 by faventur          #+#    #+#             */
-/*   Updated: 2022/04/15 13:54:15 by faventur         ###   ########.fr       */
+/*   Updated: 2022/04/18 17:09:20 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/stacks.h"
+#include "stacks.h"
 
 static int	sort_five_get_min(t_stack *stack1)
 {

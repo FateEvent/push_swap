@@ -6,11 +6,11 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 14:16:16 by faventur          #+#    #+#             */
-/*   Updated: 2022/04/15 13:58:01 by faventur         ###   ########.fr       */
+/*   Updated: 2022/04/18 17:13:34 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/stacks.h"
+#include "stacks.h"
 
 int	main(int argc, char *argv[])
 {

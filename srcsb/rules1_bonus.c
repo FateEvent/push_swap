@@ -6,11 +6,11 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/11 16:54:00 by faventur          #+#    #+#             */
-/*   Updated: 2022/04/15 14:03:42 by faventur         ###   ########.fr       */
+/*   Updated: 2022/04/18 17:11:35 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/checker.h"
+#include "checker.h"
 
 void	sa_bonus(t_stack *stack_a)
 {

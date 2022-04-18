@@ -6,7 +6,7 @@
 #    By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/10 17:53:32 by faventur          #+#    #+#              #
-#    Updated: 2022/04/15 17:53:09 by faventur         ###   ########.fr        #
+#    Updated: 2022/04/18 17:11:00 by faventur         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,9 +19,9 @@ SRCSB =	checker.c check_ft_bonus.c utils_bonus.c actions_bonus.c \
 	rules1_bonus.c rules2_bonus.c rules3_bonus.c position_bonus.c \
 	stack_ft_bonus.c
 
-OBJS	= $(addprefix srcs/, ${SRCS:.c=.o})
+OBJS = $(addprefix srcs/, ${SRCS:.c=.o})
 
-OBJSB	= $(addprefix srcsb/, ${SRCSB:.c=.o})
+OBJSB = $(addprefix srcsb/, ${SRCSB:.c=.o})
 
 FLAGS = -Wall -Wextra -Werror
 
@@ -30,6 +30,9 @@ RM =	rm -f
 NAME = push_swap
 
 NAME_B = checker
+
+.c.o:
+		gcc -Wall -Wextra -Werror -c -I./includes $< -o ${<:.c=.o}
 
 NONE = \033[0m
 HIRED = \033[91m

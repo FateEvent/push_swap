@@ -6,11 +6,11 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/11 14:41:02 by faventur          #+#    #+#             */
-/*   Updated: 2022/04/15 13:54:07 by faventur         ###   ########.fr       */
+/*   Updated: 2022/04/18 17:09:25 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/stacks.h"
+#include "stacks.h"
 
 void	sort_two(t_stack *stack)
 {

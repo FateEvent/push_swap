@@ -6,11 +6,11 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/12 13:32:15 by faventur          #+#    #+#             */
-/*   Updated: 2022/04/15 14:00:34 by faventur         ###   ########.fr       */
+/*   Updated: 2022/04/18 17:09:40 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/stacks.h"
+#include "stacks.h"
 
 int	find_max(t_stack *stack)
 {

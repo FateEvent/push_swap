@@ -6,11 +6,11 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 21:41:32 by faventur          #+#    #+#             */
-/*   Updated: 2022/04/15 13:54:09 by faventur         ###   ########.fr       */
+/*   Updated: 2022/04/18 17:09:33 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/stacks.h"
+#include "stacks.h"
 
 void	ft_swap(t_stack *stack)
 {
