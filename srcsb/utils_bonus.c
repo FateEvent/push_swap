@@ -6,11 +6,11 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 18:15:08 by faventur          #+#    #+#             */
-/*   Updated: 2022/04/15 15:19:13 by faventur         ###   ########.fr       */
+/*   Updated: 2022/06/21 18:14:38 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/checker.h"
+#include "checker.h"
 
 static int	*ft_create_arr(t_stack *stack, int size)
 {

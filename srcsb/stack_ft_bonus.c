@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 15:19:24 by faventur          #+#    #+#             */
-/*   Updated: 2022/04/15 14:03:53 by faventur         ###   ########.fr       */
+/*   Updated: 2022/06/21 18:14:38 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 ** the stack passed as a parameter.
 */
 
-#include "../includes/checker.h"
+#include "checker.h"
 
 t_stack	*ft_stacknew(void)
 {
